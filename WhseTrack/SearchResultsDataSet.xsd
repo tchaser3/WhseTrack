@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SearchResultsDataSet" targetNamespace="http://tempuri.org/SearchResultsDataSet.xsd" xmlns:mstns="http://tempuri.org/SearchResultsDataSet.xsd" xmlns="http://tempuri.org/SearchResultsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SearchResultsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SearchResultsDataSet" msprop:Generator_UserDSName="SearchResultsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="searchresults" msprop:Generator_TableClassName="searchresultsDataTable" msprop:Generator_TableVarName="tablesearchresults" msprop:Generator_TablePropName="searchresults" msprop:Generator_RowDeletingName="searchresultsRowDeleting" msprop:Generator_RowChangingName="searchresultsRowChanging" msprop:Generator_RowEvHandlerName="searchresultsRowChangeEventHandler" msprop:Generator_RowDeletedName="searchresultsRowDeleted" msprop:Generator_UserTableName="searchresults" msprop:Generator_RowChangedName="searchresultsRowChanged" msprop:Generator_RowEvArgName="searchresultsRowChangeEvent" msprop:Generator_RowClassName="searchresultsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransasctionID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnTransasctionID" msprop:Generator_ColumnPropNameInRow="TransasctionID" msprop:Generator_ColumnPropNameInTable="TransasctionIDColumn" msprop:Generator_UserColumnName="TransasctionID" type="xs:int" />
+              <xs:element name="BJCNumber" msprop:Generator_ColumnVarNameInTable="columnBJCNumber" msprop:Generator_ColumnPropNameInRow="BJCNumber" msprop:Generator_ColumnPropNameInTable="BJCNumberColumn" msprop:Generator_UserColumnName="BJCNumber" type="xs:int" />
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" />
+              <xs:element name="Make" msprop:Generator_ColumnVarNameInTable="columnMake" msprop:Generator_ColumnPropNameInRow="Make" msprop:Generator_ColumnPropNameInTable="MakeColumn" msprop:Generator_UserColumnName="Make" type="xs:string" />
+              <xs:element name="Model" msprop:Generator_ColumnVarNameInTable="columnModel" msprop:Generator_ColumnPropNameInRow="Model" msprop:Generator_ColumnPropNameInTable="ModelColumn" msprop:Generator_UserColumnName="Model" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" type="xs:string" />
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" type="xs:string" />
+              <xs:element name="Transaction" msprop:Generator_ColumnVarNameInTable="columnTransaction" msprop:Generator_ColumnPropNameInRow="Transaction" msprop:Generator_ColumnPropNameInTable="TransactionColumn" msprop:Generator_UserColumnName="Transaction" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:searchresults" />
+      <xs:field xpath="mstns:TransasctionID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

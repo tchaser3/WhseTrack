@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewPartNumbers" targetNamespace="http://tempuri.org/NewPartNumbers.xsd" xmlns:mstns="http://tempuri.org/NewPartNumbers.xsd" xmlns="http://tempuri.org/NewPartNumbers.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NewPartNumbers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="NewPartNumbers" msprop:Generator_UserDSName="NewPartNumbers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="newpartnumbers" msprop:Generator_TableClassName="newpartnumbersDataTable" msprop:Generator_TableVarName="tablenewpartnumbers" msprop:Generator_TablePropName="newpartnumbers" msprop:Generator_RowDeletingName="newpartnumbersRowDeleting" msprop:Generator_RowChangingName="newpartnumbersRowChanging" msprop:Generator_RowEvHandlerName="newpartnumbersRowChangeEventHandler" msprop:Generator_RowDeletedName="newpartnumbersRowDeleted" msprop:Generator_UserTableName="newpartnumbers" msprop:Generator_RowChangedName="newpartnumbersRowChanged" msprop:Generator_RowEvArgName="newpartnumbersRowChangeEvent" msprop:Generator_RowClassName="newpartnumbersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
+              <xs:element name="Whse" msprop:Generator_ColumnVarNameInTable="columnWhse" msprop:Generator_ColumnPropNameInRow="Whse" msprop:Generator_ColumnPropNameInTable="WhseColumn" msprop:Generator_UserColumnName="Whse" type="xs:string" />
+              <xs:element name="PartNumber" msprop:Generator_ColumnVarNameInTable="columnPartNumber" msprop:Generator_ColumnPropNameInRow="PartNumber" msprop:Generator_ColumnPropNameInTable="PartNumberColumn" msprop:Generator_UserColumnName="PartNumber" type="xs:string" />
+              <xs:element name="JDEPartNumber" msprop:Generator_ColumnVarNameInTable="columnJDEPartNumber" msprop:Generator_ColumnPropNameInRow="JDEPartNumber" msprop:Generator_ColumnPropNameInTable="JDEPartNumberColumn" msprop:Generator_UserColumnName="JDEPartNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

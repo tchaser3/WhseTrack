@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PartTransactionDataSet" targetNamespace="http://tempuri.org/PartTransactionDataSet.xsd" xmlns:mstns="http://tempuri.org/PartTransactionDataSet.xsd" xmlns="http://tempuri.org/PartTransactionDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PartTransactionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PartTransactionDataSet" msprop:Generator_UserDSName="PartTransactionDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="parttransactions" msprop:Generator_TableClassName="parttransactionsDataTable" msprop:Generator_TableVarName="tableparttransactions" msprop:Generator_TablePropName="parttransactions" msprop:Generator_RowDeletingName="parttransactionsRowDeleting" msprop:Generator_RowChangingName="parttransactionsRowChanging" msprop:Generator_RowEvHandlerName="parttransactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="parttransactionsRowDeleted" msprop:Generator_UserTableName="parttransactions" msprop:Generator_RowChangedName="parttransactionsRowChanged" msprop:Generator_RowEvArgName="parttransactionsRowChangeEvent" msprop:Generator_RowClassName="parttransactionsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
+              <xs:element name="ProjectID" msprop:Generator_ColumnVarNameInTable="columnProjectID" msprop:Generator_ColumnPropNameInRow="ProjectID" msprop:Generator_ColumnPropNameInTable="ProjectIDColumn" msprop:Generator_UserColumnName="ProjectID" type="xs:string" />
+              <xs:element name="QuantityReceived" msprop:Generator_ColumnVarNameInTable="columnQuantityReceived" msprop:Generator_ColumnPropNameInRow="QuantityReceived" msprop:Generator_ColumnPropNameInTable="QuantityReceivedColumn" msprop:Generator_UserColumnName="QuantityReceived" type="xs:int" />
+              <xs:element name="QuantityIssued" msprop:Generator_ColumnVarNameInTable="columnQuantityIssued" msprop:Generator_ColumnPropNameInRow="QuantityIssued" msprop:Generator_ColumnPropNameInTable="QuantityIssuedColumn" msprop:Generator_UserColumnName="QuantityIssued" type="xs:int" />
+              <xs:element name="QuantityReported" msprop:Generator_ColumnVarNameInTable="columnQuantityReported" msprop:Generator_ColumnPropNameInRow="QuantityReported" msprop:Generator_ColumnPropNameInTable="QuantityReportedColumn" msprop:Generator_UserColumnName="QuantityReported" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:parttransactions" />
+      <xs:field xpath="mstns:TransactionID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

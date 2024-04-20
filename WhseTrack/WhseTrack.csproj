@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80ADFFCC-6034-49FD-856F-D2FBEACF5503}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WhseTrack</RootNamespace>
+    <AssemblyName>WhseTrack</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>blue_jay_icon_CM1_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoSignInDLL">
+      <HintPath>..\..\Blue Jay Class Library\AutoSignInDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="BOMPartsDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Blue Jay Class Library\BOMPartsDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CreateIDDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Blue Jay Class Library\CreateIDDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="CSVFileDLL">
+      <HintPath>..\..\Blue Jay Class Library\CSVFileDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DataValidationDLL">
+      <HintPath>..\..\Blue Jay Class Library\DataValidationDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DateSearchDLL">
+      <HintPath>..\..\Blue Jay Class Library\DateSearchDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="InspectionsDLL">
+      <HintPath>..\..\Blue Jay Class Library\InspectionsDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="InventoryDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Blue Jay Class Library\InventoryDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="IssuedPartsDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Blue Jay Class Library\IssuedPartsDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="KeyWordDLL">
+      <HintPath>..\..\Blue Jay Class Library\KeyWordDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="LastTransactionDLL">
+      <HintPath>..\..\Blue Jay Class Library\LastTransactionDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NewEmployeeDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEmployeeDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="PartNumberDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Blue Jay Class Library\PartNumberDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectsDLL">
+      <HintPath>..\..\Blue Jay Class Library\ProjectsDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="ReceiveCableDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Blue Jay Class Library\ReceiveCableDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="ReceivedMaterialDLL">
+      <HintPath>..\..\Blue Jay Class Library\ReceivedMaterialDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VehicleHistoryDLL">
+      <HintPath>..\..\Blue Jay Class Library\VehicleHistoryDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="VehiclesDLL">
+      <HintPath>..\..\Blue Jay Class Library\VehiclesDLL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewProjectFromParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewProjectFromParts.Designer.cs">
+      <DependentUpon>AddNewProjectFromParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPartNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPartNumbers.Designer.cs">
+      <DependentUpon>AddPartNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdjustInventory.Designer.cs">
+      <DependentUpon>AdjustInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckForPartID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckForPartID.Designer.cs">
+      <DependentUpon>CheckForPartID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInventoryTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckInventoryTables.Designer.cs">
+      <DependentUpon>CheckInventoryTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPartInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckPartInfo.Designer.cs">
+      <DependentUpon>CheckPartInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClevelandCountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClevelandCountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompleteInventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompleteInventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CountsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CountsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewPart.Designer.cs">
+      <DependentUpon>CreateNewPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSVDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DateParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateParameters.Designer.cs">
+      <DependentUpon>DateParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatePartSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatePartSearch.Designer.cs">
+      <DependentUpon>DatePartSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatePartTransactionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatePartTransactionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnterInventoryCounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterInventoryCounts.Designer.cs">
+      <DependentUpon>EnterInventoryCounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterInventoryForm.Designer.cs">
+      <DependentUpon>EnterInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInventoryCounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInventoryCounts.Designer.cs">
+      <DependentUpon>ImportInventoryCounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportPartNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportPartNumbers.Designer.cs">
+      <DependentUpon>ImportPartNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryEnteredDataSet.cs">
+      <DependentUpon>InventoryEnteredDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryEnteredDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryEnteredDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryEvaluation.Designer.cs">
+      <DependentUpon>InventoryEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryEvaluationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryEvaluationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryMenu.Designer.cs">
+      <DependentUpon>InventoryMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryReports.Designer.cs">
+      <DependentUpon>InventoryReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JamestownCountsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JamestownCountsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JohnsPartsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JohnsPartsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KentuckyCountsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KentuckyCountsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logon.Designer.cs">
+      <DependentUpon>Logon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessagesClass.cs" />
+    <Compile Include="NewPartNumbers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewPartNumbers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryPartsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderEntryPartsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PartMatrixDataSet.cs">
+      <DependentUpon>PartMatrixDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PartMatrixDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartMatrixDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PartNumberMatrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartNumberMatrix.Designer.cs">
+      <DependentUpon>PartNumberMatrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartSearchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartSearchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PartSelectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartSelectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PartsWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartsWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PartTransactionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartTransactionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PleaseWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PleaseWait.Designer.cs">
+      <DependentUpon>PleaseWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectPartReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectPartReport.Designer.cs">
+      <DependentUpon>ProjectPartReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectTransactionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTransactionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemovePartNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemovePartNumbers.Designer.cs">
+      <DependentUpon>RemovePartNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemovePartNumbersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemovePartNumbersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportMenu.Designer.cs">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResultsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchResultsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPart.Designer.cs">
+      <DependentUpon>SelectPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPartDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectPartDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SelectWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectWarehouse.Designer.cs">
+      <DependentUpon>SelectWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowInventoryEntered.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowInventoryEntered.Designer.cs">
+      <DependentUpon>ShowInventoryEntered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignOutVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignOutVehicle.Designer.cs">
+      <DependentUpon>SignOutVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilitiesMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilitiesMenu.Designer.cs">
+      <DependentUpon>UtilitiesMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleAuditDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleAuditDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleExceptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleExceptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleExceptionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleExceptionReport.Designer.cs">
+      <DependentUpon>VehicleExceptionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleInspectionAuditReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleInspectionAuditReport.Designer.cs">
+      <DependentUpon>VehicleInspectionAuditReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleMenu.Designer.cs">
+      <DependentUpon>VehicleMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReportMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleReportMenu.Designer.cs">
+      <DependentUpon>VehicleReportMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiclesInYardReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiclesInYardReport.Designer.cs">
+      <DependentUpon>VehiclesInYardReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiclesSignedOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiclesSignedOut.Designer.cs">
+      <DependentUpon>VehiclesSignedOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiclesSignedOutDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehiclesSignedOutDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEventLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEventLog.Designer.cs">
+      <DependentUpon>ViewEventLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMaterialInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMaterialInventory.Designer.cs">
+      <DependentUpon>ViewMaterialInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewVehicleHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewVehicleHistory.Designer.cs">
+      <DependentUpon>ViewVehicleHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseInventoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseInventoryReport.Designer.cs">
+      <DependentUpon>WarehouseInventoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseTransactionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseTransactionReport.Designer.cs">
+      <DependentUpon>WarehouseTransactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WisconsinCountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WisconsinCountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YardReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YardReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewProjectFromParts.resx">
+      <DependentUpon>AddNewProjectFromParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPartNumbers.resx">
+      <DependentUpon>AddPartNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdjustInventory.resx">
+      <DependentUpon>AdjustInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckForPartID.resx">
+      <DependentUpon>CheckForPartID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckInventoryTables.resx">
+      <DependentUpon>CheckInventoryTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckPartInfo.resx">
+      <DependentUpon>CheckPartInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewPart.resx">
+      <DependentUpon>CreateNewPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateParameters.resx">
+      <DependentUpon>DateParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePartSearch.resx">
+      <DependentUpon>DatePartSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterInventoryForm.resx">
+      <DependentUpon>EnterInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInventoryCounts.resx">
+      <DependentUpon>ImportInventoryCounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportPartNumbers.resx">
+      <DependentUpon>ImportPartNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryEvaluation.resx">
+      <DependentUpon>InventoryEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryMenu.resx">
+      <DependentUpon>InventoryMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryReports.resx">
+      <DependentUpon>InventoryReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logon.resx">
+      <DependentUpon>Logon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartNumberMatrix.resx">
+      <DependentUpon>PartNumberMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PleaseWait.resx">
+      <DependentUpon>PleaseWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectPartReport.resx">
+      <DependentUpon>ProjectPartReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RemovePartNumbers.resx">
+      <DependentUpon>RemovePartNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMenu.resx">
+      <DependentUpon>ReportMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectPart.resx">
+      <DependentUpon>SelectPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectWarehouse.resx">
+      <DependentUpon>SelectWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowInventoryEntered.resx">
+      <DependentUpon>ShowInventoryEntered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignOutVehicle.resx">
+      <DependentUpon>SignOutVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilitiesMenu.resx">
+      <DependentUpon>UtilitiesMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleExceptionReport.resx">
+      <DependentUpon>VehicleExceptionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleInspectionAuditReport.resx">
+      <DependentUpon>VehicleInspectionAuditReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleMenu.resx">
+      <DependentUpon>VehicleMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleReportMenu.resx">
+      <DependentUpon>VehicleReportMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiclesInYardReport.resx">
+      <DependentUpon>VehiclesInYardReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiclesSignedOut.resx">
+      <DependentUpon>VehiclesSignedOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEventLog.resx">
+      <DependentUpon>ViewEventLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMaterialInventory.resx">
+      <DependentUpon>ViewMaterialInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewVehicleHistory.resx">
+      <DependentUpon>ViewVehicleHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseInventoryReport.resx">
+      <DependentUpon>WarehouseInventoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseTransactionReport.resx">
+      <DependentUpon>WarehouseTransactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClevelandCountDataSet.xsc">
+      <DependentUpon>ClevelandCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClevelandCountDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClevelandCountDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClevelandCountDataSet.xss">
+      <DependentUpon>ClevelandCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompleteInventoryDataSet.xsc">
+      <DependentUpon>CompleteInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompleteInventoryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompleteInventoryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CompleteInventoryDataSet.xss">
+      <DependentUpon>CompleteInventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CountsDataSet.xsc">
+      <DependentUpon>CountsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CountsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CountsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CountsDataSet.xss">
+      <DependentUpon>CountsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CSVDataSet.xsc">
+      <DependentUpon>CSVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CSVDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CSVDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CSVDataSet.xss">
+      <DependentUpon>CSVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatePartTransactionDataSet.xsc">
+      <DependentUpon>DatePartTransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatePartTransactionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatePartTransactionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatePartTransactionDataSet.xss">
+      <DependentUpon>DatePartTransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryEnteredDataSet.xsc">
+      <DependentUpon>InventoryEnteredDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryEnteredDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryEnteredDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InventoryEnteredDataSet.xss">
+      <DependentUpon>InventoryEnteredDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryEvaluationDataSet.xsc">
+      <DependentUpon>InventoryEvaluationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryEvaluationDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryEvaluationDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InventoryEvaluationDataSet.xss">
+      <DependentUpon>InventoryEvaluationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JamestownCountsDataSet.xsc">
+      <DependentUpon>JamestownCountsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JamestownCountsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JamestownCountsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JamestownCountsDataSet.xss">
+      <DependentUpon>JamestownCountsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JohnsPartsDataSet.xsc">
+      <DependentUpon>JohnsPartsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JohnsPartsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JohnsPartsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JohnsPartsDataSet.xss">
+      <DependentUpon>JohnsPartsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KentuckyCountsDataSet.xsc">
+      <DependentUpon>KentuckyCountsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KentuckyCountsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KentuckyCountsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KentuckyCountsDataSet.xss">
+      <DependentUpon>KentuckyCountsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewPartNumbers.xsc">
+      <DependentUpon>NewPartNumbers.xsd</DependentUpon>
+    </None>
+    <None Include="NewPartNumbers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewPartNumbers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NewPartNumbers.xss">
+      <DependentUpon>NewPartNumbers.xsd</DependentUpon>
+    </None>
+    <None Include="OrderEntryPartsDataSet.xsc">
+      <DependentUpon>OrderEntryPartsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrderEntryPartsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderEntryPartsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OrderEntryPartsDataSet.xss">
+      <DependentUpon>OrderEntryPartsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartMatrixDataSet.xsc">
+      <DependentUpon>PartMatrixDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartMatrixDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartMatrixDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PartMatrixDataSet.xss">
+      <DependentUpon>PartMatrixDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartSearchDataSet.xsc">
+      <DependentUpon>PartSearchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartSearchDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartSearchDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PartSearchDataSet.xss">
+      <DependentUpon>PartSearchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartSelectDataSet.xsc">
+      <DependentUpon>PartSelectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartSelectDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartSelectDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PartSelectDataSet.xss">
+      <DependentUpon>PartSelectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartsWarehouseDataSet.xsc">
+      <DependentUpon>PartsWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartsWarehouseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartsWarehouseDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PartsWarehouseDataSet.xss">
+      <DependentUpon>PartsWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartTransactionDataSet.xsc">
+      <DependentUpon>PartTransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PartTransactionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PartTransactionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PartTransactionDataSet.xss">
+      <DependentUpon>PartTransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectTransactionDataSet.xsc">
+      <DependentUpon>ProjectTransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectTransactionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectTransactionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectTransactionDataSet.xss">
+      <DependentUpon>ProjectTransactionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RemovePartNumbersDataSet.xsc">
+      <DependentUpon>RemovePartNumbersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RemovePartNumbersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemovePartNumbersDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RemovePartNumbersDataSet.xss">
+      <DependentUpon>RemovePartNumbersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SearchResultsDataSet.xsc">
+      <DependentUpon>SearchResultsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SearchResultsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchResultsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SearchResultsDataSet.xss">
+      <DependentUpon>SearchResultsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SelectPartDataSet.xsc">
+      <DependentUpon>SelectPartDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SelectPartDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SelectPartDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SelectPartDataSet.xss">
+      <DependentUpon>SelectPartDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleAuditDataSet.xsc">
+      <DependentUpon>VehicleAuditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleAuditDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehicleAuditDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VehicleAuditDataSet.xss">
+      <DependentUpon>VehicleAuditDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleExceptionDataSet.xsc">
+      <DependentUpon>VehicleExceptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleExceptionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehicleExceptionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VehicleExceptionDataSet.xss">
+      <DependentUpon>VehicleExceptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehiclesSignedOutDataSet.xsc">
+      <DependentUpon>VehiclesSignedOutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehiclesSignedOutDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehiclesSignedOutDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VehiclesSignedOutDataSet.xss">
+      <DependentUpon>VehiclesSignedOutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WisconsinCountDataSet.xsc">
+      <DependentUpon>WisconsinCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WisconsinCountDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WisconsinCountDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WisconsinCountDataSet.xss">
+      <DependentUpon>WisconsinCountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="YardReportDataSet.xsc">
+      <DependentUpon>YardReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="YardReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YardReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YardReportDataSet.xss">
+      <DependentUpon>YardReportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whsetrac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="blue_jay_icon_CM1_icon.ico" />
+    <Content Include="tools.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
